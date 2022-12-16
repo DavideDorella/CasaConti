@@ -23,12 +23,13 @@ namespace CarListApp.Maui.Services
 
         private string GetBaseAdress()
         {
-            #if DEBUG
-                return DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:8099" : "http://localhost:8099";
-            #elif RELEASE
+#if DEBUG
+            // return DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:8099" : "http://localhost:8099";
+            return DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:7075" : "http://localhost:7075";
+#elif RELEASE
                 // published address here
                 return "https://carlistappapi20221121135717.azurewebsites.net";
-            #endif
+#endif
         }
 
         public async Task <List<Car>> GetCars()
@@ -118,6 +119,7 @@ namespace CarListApp.Maui.Services
             catch (Exception ex)
             {
                 StatusMessage = "Failed to login successfully.";
+                StatusMessage = $"Errore: {ex.Message}";
                 return new AuthResponseModel();
             }
         }
