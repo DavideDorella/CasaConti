@@ -8,4 +8,5 @@ public class Car
     public string Catspesa { get; set; }
 
     public string Desspesa { get; set; }
+    public string Conto { get; set; }
 }

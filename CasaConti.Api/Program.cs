@@ -96,6 +96,7 @@ app.MapPut("/cars/{id}", async (int id, Car car, CarListDbContext db) => {
     record.Vin = car.Vin;
     record.Catspesa= car.Catspesa;
     record.Desspesa= car.Desspesa;
+    record.Conto =car.Conto;
 
     await db.SaveChangesAsync();
 

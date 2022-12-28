@@ -4,7 +4,9 @@ using CarListApp.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
+using System;
 using System.Collections.ObjectModel;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 
 namespace CarListApp.Maui.ViewModels
@@ -37,8 +39,12 @@ namespace CarListApp.Maui.ViewModels
         [ObservableProperty]
         string catspesa;
         [ObservableProperty]
-        string desspesa; 
+        string desspesa;
 
+        [ObservableProperty]
+        string conto;
+
+        
         [ObservableProperty]
         string addEditButtonText;
         [ObservableProperty]
@@ -100,6 +106,7 @@ namespace CarListApp.Maui.ViewModels
                 Vin = Vin,
                 Catspesa = Catspesa, 
                 Desspesa= Desspesa,
+                Conto = Conto,
             };
 
             if (CarId != 0)
@@ -184,6 +191,8 @@ namespace CarListApp.Maui.ViewModels
             Vin = car.Vin;
             Catspesa= car.Catspesa;
             Desspesa= car.Desspesa;
+            Conto = car.Conto;
+         
         }
 
         [RelayCommand]
@@ -196,6 +205,7 @@ namespace CarListApp.Maui.ViewModels
             Vin = string.Empty;
             Catspesa = string.Empty;    
             Desspesa = string.Empty;
+            Conto = string.Empty;
         }
 
         private async Task ShowAlert(string message)
