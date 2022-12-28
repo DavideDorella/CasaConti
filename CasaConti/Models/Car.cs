@@ -16,5 +16,9 @@ namespace CarListApp.Maui.Models
         [MaxLength(12)]
         [Unique]
         public string Vin { get; set; }
+
+       
+        public string Catspesa { get; set; }
+        
     }
 }

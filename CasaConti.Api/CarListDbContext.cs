@@ -21,70 +21,80 @@ public class CarListDbContext : IdentityDbContext
                 Id = 1,
                 Make = "Honda",
                 Model = "Fit",
-                Vin="ABC"
+                Vin="ABC",
+                Catspesa ="a",
             },
             new Car
             {
                 Id = 2,
                 Make = "Honda",
                 Model = "Civic",
-                Vin = "ABC2"
+                Vin = "ABC2",
+                Catspesa ="b",
             },
             new Car
             {
                 Id = 3,
                 Make = "Honda",
                 Model = "Stream",
-                Vin = "ABC1"
+                Vin = "ABC1",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 4,
                 Make = "Nissan",
                 Model = "Note",
-                Vin = "ABC4"
+                Vin = "ABC4",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 5,
                 Make = "Nissan",
                 Model = "Atlas",
-                Vin = "ABC5"
+                Vin = "ABC5",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 6,
                 Make = "Nissan",
                 Model = "Dualis",
-                Vin = "ABC6"
+                Vin = "ABC6",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 7,
                 Make = "Nissan",
                 Model = "Murano",
-                Vin = "ABC7"
+                Vin = "ABC7",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 8,
                 Make = "Audi",
                 Model = "A5",
-                Vin = "ABC8"
+                Vin = "ABC8",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 9,
                 Make = "BMW",
                 Model = "M3",
-                Vin = "ABC9"
+                Vin = "ABC9",
+                Catspesa = "b",
             },
             new Car
             {
                 Id = 10,
                 Make = "Jaguar",
                 Model = "F-Pace",
-                Vin = "ABC10"
+                Vin = "ABC10",
+                Catspesa = "b",
             }
         );
 

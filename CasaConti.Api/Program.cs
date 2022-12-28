@@ -22,7 +22,8 @@ builder.Services.AddCors(o => {
     o.AddPolicy("AllowAll", a => a.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 });
 
-var conn = new SqliteConnection($"Data Source=carlist.db");
+//var conn = new SqliteConnection($"Data Source=carlist.db");
+var conn = new SqliteConnection($"Data Source=casaconti.db");
 builder.Services.AddDbContext<CarListDbContext>(o => o.UseSqlite(conn));
 
 
