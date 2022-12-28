@@ -23,6 +23,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Fit",
                 Vin="ABC",
                 Catspesa ="a",
+                Desspesa="b",
             },
             new Car
             {
@@ -31,6 +32,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Civic",
                 Vin = "ABC2",
                 Catspesa ="b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -39,6 +41,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Stream",
                 Vin = "ABC1",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -47,6 +50,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Note",
                 Vin = "ABC4",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -55,6 +59,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Atlas",
                 Vin = "ABC5",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -63,6 +68,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Dualis",
                 Vin = "ABC6",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -71,6 +77,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "Murano",
                 Vin = "ABC7",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -79,6 +86,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "A5",
                 Vin = "ABC8",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -87,6 +95,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "M3",
                 Vin = "ABC9",
                 Catspesa = "b",
+                Desspesa = "b",
             },
             new Car
             {
@@ -95,6 +104,7 @@ public class CarListDbContext : IdentityDbContext
                 Model = "F-Pace",
                 Vin = "ABC10",
                 Catspesa = "b",
+                Desspesa = "b",
             }
         );
 

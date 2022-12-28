@@ -18,5 +18,8 @@
         <Label Text="{Binding Car.Catspesa}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="Medium"/>
+        <Label Text="{Binding Car.Desspesa}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="Medium"/>
     </StackLayout>
 </ContentPage>

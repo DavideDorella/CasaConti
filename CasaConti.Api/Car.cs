@@ -6,4 +6,6 @@ public class Car
     public string Model { get; set; }
     public string Vin { get; set; }
     public string Catspesa { get; set; }
+
+    public string Desspesa { get; set; }
 }

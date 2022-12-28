@@ -17,8 +17,9 @@ namespace CarListApp.Maui.Models
         [Unique]
         public string Vin { get; set; }
 
-       
-        public string Catspesa { get; set; }
         
+        public string Catspesa { get; set; }
+
+        public string Desspesa { get; set; }
     }
 }

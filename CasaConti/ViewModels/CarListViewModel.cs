@@ -37,6 +37,9 @@ namespace CarListApp.Maui.ViewModels
         [ObservableProperty]
         string catspesa;
         [ObservableProperty]
+        string desspesa; 
+
+        [ObservableProperty]
         string addEditButtonText;
         [ObservableProperty]
         int carId;
@@ -96,6 +99,7 @@ namespace CarListApp.Maui.ViewModels
                 Model = Model,
                 Vin = Vin,
                 Catspesa = Catspesa, 
+                Desspesa= Desspesa,
             };
 
             if (CarId != 0)
@@ -179,6 +183,7 @@ namespace CarListApp.Maui.ViewModels
             Model = car.Model;
             Vin = car.Vin;
             Catspesa= car.Catspesa;
+            Desspesa= car.Desspesa;
         }
 
         [RelayCommand]
@@ -190,6 +195,7 @@ namespace CarListApp.Maui.ViewModels
             Model = string.Empty;
             Vin = string.Empty;
             Catspesa = string.Empty;    
+            Desspesa = string.Empty;
         }
 
         private async Task ShowAlert(string message)
