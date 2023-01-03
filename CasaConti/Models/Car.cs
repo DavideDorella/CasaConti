@@ -23,5 +23,9 @@ namespace CarListApp.Maui.Models
 
         public string Desspesa { get; set; }
         public string Conto { get; set; }
+        public decimal Importo { get; set; }
+
+        public DateTime Data { get; set; }
+        
     }
 }

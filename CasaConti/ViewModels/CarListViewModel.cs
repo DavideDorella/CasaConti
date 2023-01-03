@@ -6,15 +6,17 @@ using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Data.SqlTypes;
 using System.Diagnostics;
+//using static CoreFoundation.DispatchSource;
 
 namespace CarListApp.Maui.ViewModels
 {
     public partial class CarListViewModel : BaseViewModel
     {
-        const string editButtonText = "Update Car";
-        const string createButtonText = "Add Car";
+        const string editButtonText = "Aggiorna Spesa";
+        const string createButtonText = "Nuova Spesa";
         private readonly CarApiService carApiService;
         NetworkAccess accessType = Connectivity.Current.NetworkAccess;
         string message = string.Empty;
@@ -23,7 +25,7 @@ namespace CarListApp.Maui.ViewModels
 
         public CarListViewModel(CarApiService carApiService)
         {
-            Title = "Car List";
+            Title = "Spese";
             AddEditButtonText = createButtonText;
             this.carApiService = carApiService;
         }
@@ -44,7 +46,13 @@ namespace CarListApp.Maui.ViewModels
         [ObservableProperty]
         string conto;
 
+        [ObservableProperty]
+        decimal importo;
+
+        [ObservableProperty]
+        DateTime data; 
         
+
         [ObservableProperty]
         string addEditButtonText;
         [ObservableProperty]
@@ -107,6 +115,8 @@ namespace CarListApp.Maui.ViewModels
                 Catspesa = Catspesa, 
                 Desspesa= Desspesa,
                 Conto = Conto,
+                Importo= Importo,
+                Data= Data,
             };
 
             if (CarId != 0)
@@ -192,6 +202,8 @@ namespace CarListApp.Maui.ViewModels
             Catspesa= car.Catspesa;
             Desspesa= car.Desspesa;
             Conto = car.Conto;
+            Importo= car.Importo;
+            Data= car.Data;
          
         }
 
@@ -206,6 +218,8 @@ namespace CarListApp.Maui.ViewModels
             Catspesa = string.Empty;    
             Desspesa = string.Empty;
             Conto = string.Empty;
+            Importo = 0;
+            Data = DateTime.Today;
         }
 
         private async Task ShowAlert(string message)

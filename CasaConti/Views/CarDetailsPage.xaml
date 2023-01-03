@@ -24,6 +24,12 @@
         <Label Text="{Binding Car.Conto}"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="Medium"/>
-        
+        <Label Text="{Binding Car.Importo}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="Medium"/>
+        <Label Text="{Binding Car.Data}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" FontSize="Medium"/>
+
     </StackLayout>
 </ContentPage>

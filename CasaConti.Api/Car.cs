@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.VisualBasic;
+
 public class Car
 {
     public int Id { get; set; }
@@ -9,4 +11,6 @@ public class Car
 
     public string Desspesa { get; set; }
     public string Conto { get; set; }
+    public decimal Importo { get; set; }
+    public DateTime Data { get; set; }  
 }

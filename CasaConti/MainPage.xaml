@@ -25,6 +25,8 @@
             <Entry x:Name="Catspesa" Placeholder="Enter Catspesa" Text="{Binding Catspesa}"/>
             <Entry x:Name="Desspesa" Placeholder="Enter Desspesa" Text="{Binding Desspesa}"/>
             <Entry x:Name="Conto" Placeholder="Enter Conto" Text="{Binding Conto}"/>
+            <Entry x:Name="Importo" Placeholder="Enter Importo" Text="{Binding Importo}"/>
+            <Entry x:Name="Data" Placeholder="Enter Data" Text="{Binding Data}"/>
         </VerticalStackLayout>
 
 

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarListApp.Api.Migrations
 {
     [DbContext(typeof(CarListDbContext))]
-    partial class CarListDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221230092220_initial4")]
+    partial class initial4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.9");
@@ -28,9 +30,6 @@ namespace CarListApp.Api.Migrations
 
                     b.Property<string>("Conto")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("Data")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Desspesa")
@@ -62,121 +61,121 @@ namespace CarListApp.Api.Migrations
                             Id = 1,
                             Catspesa = "a",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Honda",
                             Model = "Fit",
-                            Vin = "ABC"
+                            Vin = "ABC",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 2,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Honda",
                             Model = "Civic",
-                            Vin = "ABC2"
+                            Vin = "ABC2",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 3,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Honda",
                             Model = "Stream",
-                            Vin = "ABC1"
+                            Vin = "ABC1",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 4,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Nissan",
                             Model = "Note",
-                            Vin = "ABC4"
+                            Vin = "ABC4",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 5,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Nissan",
                             Model = "Atlas",
-                            Vin = "ABC5"
+                            Vin = "ABC5",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 6,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Nissan",
                             Model = "Dualis",
-                            Vin = "ABC6"
+                            Vin = "ABC6",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 7,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Nissan",
                             Model = "Murano",
-                            Vin = "ABC7"
+                            Vin = "ABC7",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 8,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Audi",
                             Model = "A5",
-                            Vin = "ABC8"
+                            Vin = "ABC8",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 9,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "BMW",
                             Model = "M3",
-                            Vin = "ABC9"
+                            Vin = "ABC9",
+                            Data = DateTime.Today,
                         },
                         new
                         {
                             Id = 10,
                             Catspesa = "b",
                             Conto = "a",
-                            Data = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Desspesa = "b",
                             Importo = 0m,
                             Make = "Jaguar",
                             Model = "F-Pace",
-                            Vin = "ABC10"
-                        });
+                            Vin = "ABC10",
+                            Data = DateTime.Today,
+                        }); ;
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -208,14 +207,14 @@ namespace CarListApp.Api.Migrations
                         new
                         {
                             Id = "d1b5952a-2162-46c7-b29e-1a2a68922c14",
-                            ConcurrencyStamp = "51e5709c-4bb4-4733-8984-c36c8923d068",
+                            ConcurrencyStamp = "1d5d8bda-5c06-4209-866b-ad515af3e8ea",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "42358d3e-3c22-45e1-be81-6caa7ba865ef",
-                            ConcurrencyStamp = "65d981a2-49a7-4436-9289-c3ae92a14aa4",
+                            ConcurrencyStamp = "db1023a6-6bec-4336-beac-a168692c7cdb",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -312,15 +311,15 @@ namespace CarListApp.Api.Migrations
                         {
                             Id = "408aa945-3d84-4421-8342-7269ec64d949",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ac13fa34-dc2d-4ff7-ba3b-6e0abf8ed316",
+                            ConcurrencyStamp = "70b359d5-e7e6-4871-99bc-a06cde76bebf",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECnzLG+Q20jWuTtzc7wGpUi6tBh4L66ZmdBHCEXS9gEhlFkWOhQkjZ6rmC4TGAE4tA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPVLBqNQwJQM9+wPVd9Lb5rv399Koc4nwIb2jkTi1DWWQrktGQj/+BqHjq5E9TXAMQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "43690815-5cc9-48a9-a069-7f848663bd85",
+                            SecurityStamp = "733be6e6-6174-4246-b7d0-0c5294e9a504",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         },
@@ -328,15 +327,15 @@ namespace CarListApp.Api.Migrations
                         {
                             Id = "3f4631bd-f907-4409-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e6a45f2e-9104-4b96-acbb-151cecdc21c8",
+                            ConcurrencyStamp = "dedc4850-7b4e-48ce-b1aa-6f54c3b15f93",
                             Email = "user@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@LOCALHOST.COM",
                             NormalizedUserName = "USER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKnMlYoYXT+gDUmbGMA8lWOW6Nw6I6u6HgWPob0fkWDeHqfo8woetrI22IZh18V0CQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAsp6liL6Qx63W9OfMjvribBLZe2vdPDrptt8ZUSda4tAEjQRmMj0M4XHzg0vuaVsQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "83724192-f021-40ee-a5d3-15d85aedf39a",
+                            SecurityStamp = "0d781601-fbea-4bf0-ad52-3a9f01e6e116",
                             TwoFactorEnabled = false,
                             UserName = "user@localhost.com"
                         });
