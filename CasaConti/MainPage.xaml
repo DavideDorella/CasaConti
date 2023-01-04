@@ -20,8 +20,6 @@
 
         <VerticalStackLayout Padding="5" Grid.Row="0" Margin="9">
             <Entry x:Name="Make" Placeholder="Enter Make" Text="{Binding Make}" />
-            <Entry x:Name="Model" Placeholder="Enter Model" Text="{Binding Model}"/>
-            <Entry x:Name="Vin" Placeholder="Enter Vin" Text="{Binding Vin}"/>
             <Entry x:Name="Catspesa" Placeholder="Enter Catspesa" Text="{Binding Catspesa}"/>
             <Entry x:Name="Desspesa" Placeholder="Enter Desspesa" Text="{Binding Desspesa}"/>
             <Entry x:Name="Conto" Placeholder="Enter Conto" Text="{Binding Conto}"/>

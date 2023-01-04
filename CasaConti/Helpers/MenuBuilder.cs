@@ -33,7 +33,10 @@ namespace CarListApp.Maui.Helpers
                             ContentTemplate = new DataTemplate(typeof(MainPage))
                         },
                     }
+
                 };
+
+                
 
                 if (!Shell.Current.Items.Contains(flyOutItem))
                 {
@@ -65,6 +68,32 @@ namespace CarListApp.Maui.Helpers
                 }
             }
 
+            // da qui
+            var logoutFyloutItem1 = new FlyoutItem()
+            {
+                Title = "Preferenze",
+                Route = nameof(PreferenzePage),
+                FlyoutDisplayOptions = FlyoutDisplayOptions.AsSingleItem,
+                Items =
+                {
+                    new ShellContent
+                    {
+                        Icon = "dotnet_bot.svg",
+                        Title = "Preferenze",
+                        ContentTemplate = new DataTemplate(typeof(PreferenzePage))
+                    }
+                }
+            };
+
+
+            if (!Shell.Current.Items.Contains(logoutFyloutItem1))
+            {
+                Shell.Current.Items.Add(logoutFyloutItem1);
+            }
+            // a qui 
+
+
+
             var logoutFyloutItem = new FlyoutItem()
             {
                 Title = "Logout",
@@ -85,6 +114,8 @@ namespace CarListApp.Maui.Helpers
             {
                 Shell.Current.Items.Add(logoutFyloutItem);
             }
+
+            
         }
     }
 }

@@ -100,7 +100,7 @@ namespace CarListApp.Maui.ViewModels
         [RelayCommand]
         async Task SaveCar()
         {
-            if (string.IsNullOrEmpty(Make) || string.IsNullOrEmpty(Model) || string.IsNullOrEmpty(Vin))
+            if (string.IsNullOrEmpty(Make) )
             {
                 await ShowAlert("Please insert valid data");
                 return;
@@ -110,8 +110,8 @@ namespace CarListApp.Maui.ViewModels
             {
                 Id = CarId,
                 Make = Make,
-                Model = Model,
-                Vin = Vin,
+                Model = "User",
+                Vin = "Vinx",
                 Catspesa = Catspesa, 
                 Desspesa= Desspesa,
                 Conto = Conto,
