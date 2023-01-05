@@ -67,6 +67,7 @@ namespace CarListApp.Maui.Services
         {
             try
             {
+                car.Conto = Preferences.Get("ContoPref", "ContoDiProva");
                 var response = await _httpClient.PostAsJsonAsync("/cars/", car);
                 response.EnsureSuccessStatusCode();
                 StatusMessage = "Insert Successful";

@@ -106,6 +106,7 @@ namespace CarListApp.Maui.ViewModels
                 return;
             }
 
+            Data = DateTime.Today;
             var car = new Car
             {
                 Id = CarId,
