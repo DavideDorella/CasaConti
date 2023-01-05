@@ -110,7 +110,7 @@ namespace CarListApp.Maui.ViewModels
             {
                 Id = CarId,
                 Make = Make,
-                Model = "User",
+                Model = App.UserInfo.Username,
                 Vin = "Vinx",
                 Catspesa = Catspesa, 
                 Desspesa= Desspesa,

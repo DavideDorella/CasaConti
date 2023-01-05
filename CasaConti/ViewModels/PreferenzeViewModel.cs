@@ -16,18 +16,31 @@ namespace CarListApp.Maui.ViewModels
 {
     public partial class PreferenzeViewModel : BaseViewModel
     {
+
+        [ObservableProperty]
+        string contopref;
+
+
         public PreferenzeViewModel()
         {
             Preferenze();
         }
 
-
-        [RelayCommand]
-        async void Preferenze()
+        [RelayCommand]        
+        public void SavePreferenze()
         {
-            SecureStorage.Remove("Token");
-            App.UserInfo = null;
-            await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+            Preferences.Set("ContoPref", contopref);
         }
+
+        void Preferenze()
+        {
+            //SecureStorage.Remove("Token");
+            //App.UserInfo = null;
+            //await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
+            contopref = Preferences.Get("ContoPref", contopref);
+            if(contopref==null)
+                contopref= "";
+        }
+      
     }
 }

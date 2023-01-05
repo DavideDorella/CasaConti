@@ -8,5 +8,8 @@ public partial class LoginPage : ContentPage
     {
         InitializeComponent();
         BindingContext = loginViewModel;
+
+        loginViewModel.Username = "admin@localhost.com";
+        loginViewModel.Password= "P@assword1";
     }
 }
