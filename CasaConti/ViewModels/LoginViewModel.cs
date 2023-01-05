@@ -43,7 +43,7 @@ namespace CarListApp.Maui.ViewModels
                 var response = await carApiService.Login(loginModel);
 
                 // display message
-                await DisplayLoginMessage(carApiService.StatusMessage);
+                //await DisplayLoginMessage(carApiService.StatusMessage);
 
                 if (!string.IsNullOrEmpty(response.Token))
                 {

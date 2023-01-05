@@ -38,8 +38,7 @@ namespace CarListApp.Maui.ViewModels
             //App.UserInfo = null;
             //await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
             contopref = Preferences.Get("ContoPref", contopref);
-            if(contopref==null)
-                contopref= "";
+          
         }
       
     }

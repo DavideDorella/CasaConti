@@ -32,7 +32,7 @@ namespace CarListApp.Maui.Services
 #endif
         }
 
-        public async Task <List<Car>> GetCars()
+        public async Task<List<Car>> GetCars()
         {
             try
             {
@@ -73,7 +73,7 @@ namespace CarListApp.Maui.Services
             }
             catch (Exception ex)
             {
-                StatusMessage = "Failed to add data.";
+                StatusMessage = $"Failed to add data: {ex.Message}";
             }
         }
 

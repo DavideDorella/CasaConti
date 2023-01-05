@@ -114,7 +114,7 @@ namespace CarListApp.Maui.ViewModels
                 Vin = "Vinx",
                 Catspesa = Catspesa, 
                 Desspesa= Desspesa,
-                Conto = Conto,
+                Conto = Preferences.Get("ContoPref", "ciao"),
                 Importo= Importo,
                 Data= Data,
             };

@@ -10,6 +10,6 @@ public partial class LoginPage : ContentPage
         BindingContext = loginViewModel;
 
         loginViewModel.Username = "admin@localhost.com";
-        loginViewModel.Password= "P@assword1";
+        loginViewModel.Password = "P@ssword1";
     }
 }
