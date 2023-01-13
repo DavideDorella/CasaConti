@@ -46,8 +46,8 @@
                                                           CommandParameter="{Binding Id}" />
                                 </Frame.GestureRecognizers>
                                 <HorizontalStackLayout Padding="5" Spacing="5">
-                                    <Label Text="{Binding Catspesa}"></Label>
-                                    <Label Text="{Binding Model}"></Label>
+                                    <Label Text="{Binding Desspesa}"></Label>
+                                    <Label Text="{Binding Importo}"></Label>
                                 </HorizontalStackLayout>
                             </Frame>
                             <HorizontalStackLayout Grid.Column="1">
