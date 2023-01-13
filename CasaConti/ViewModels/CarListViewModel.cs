@@ -53,7 +53,7 @@ namespace CarListApp.Maui.ViewModels
         decimal importo;
 
         [ObservableProperty]
-        DateTime data; 
+        DateTime data =DateTime.Today; 
         
 
         [ObservableProperty]
