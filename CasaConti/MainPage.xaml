@@ -18,8 +18,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <VerticalStackLayout Padding="5" Grid.Row="0" Margin="9">
-            <Entry x:Name="Make" Placeholder="Enter Make" Text="{Binding Make}" />
+        <VerticalStackLayout Padding="5" Grid.Row="0" Margin="9">           
             <Entry x:Name="Catspesa" Placeholder="Enter Catspesa" Text="{Binding Catspesa}"/>
             <Entry x:Name="Desspesa" Placeholder="Enter Desspesa" Text="{Binding Desspesa}"/>
             <Entry x:Name="Conto" Placeholder="Enter Conto" Text="{Binding Conto}"/>
@@ -47,7 +46,7 @@
                                                           CommandParameter="{Binding Id}" />
                                 </Frame.GestureRecognizers>
                                 <HorizontalStackLayout Padding="5" Spacing="5">
-                                    <Label Text="{Binding Make}"></Label>
+                                    <Label Text="{Binding Catspesa}"></Label>
                                     <Label Text="{Binding Model}"></Label>
                                 </HorizontalStackLayout>
                             </Frame>

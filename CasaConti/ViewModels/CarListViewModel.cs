@@ -20,6 +20,9 @@ namespace CarListApp.Maui.ViewModels
         private readonly CarApiService carApiService;
         NetworkAccess accessType = Connectivity.Current.NetworkAccess;
         string message = string.Empty;
+        
+        //loginViewModel.Password = "P@ssword1";
+        
 
         public ObservableCollection<Car> Cars { get; private set; } = new ();
 
@@ -44,7 +47,7 @@ namespace CarListApp.Maui.ViewModels
         string desspesa;
 
         [ObservableProperty]
-        string conto;
+        string conto  = Preferences.Get("ContoPref", "Famiglia");
 
         [ObservableProperty]
         decimal importo;
@@ -100,7 +103,7 @@ namespace CarListApp.Maui.ViewModels
         [RelayCommand]
         async Task SaveCar()
         {
-            if (string.IsNullOrEmpty(Make) )
+            if (string.IsNullOrEmpty(Catspesa) )
             {
                 await ShowAlert("Please insert valid data");
                 return;
@@ -110,7 +113,7 @@ namespace CarListApp.Maui.ViewModels
             var car = new Car
             {
                 Id = CarId,
-                Make = Make,
+                Make = "Makex",
                 Model = App.UserInfo.Username,
                 Vin = "Vinx",
                 Catspesa = Catspesa, 
@@ -212,13 +215,16 @@ namespace CarListApp.Maui.ViewModels
         async Task ClearForm()
         {
             AddEditButtonText = createButtonText;
-            CarId = 0;
-            Make = string.Empty;
-            Model = string.Empty;
-            Vin = string.Empty;
+            CarId = 0;            
+                
+                
+            Make = "Makex";
+            Model = App.UserInfo.Username;
+            Vin = "Vinx";
             Catspesa = string.Empty;    
             Desspesa = string.Empty;
-            Conto = string.Empty;
+            //Conto = string.Empty;
+            Conto = Preferences.Get("ContoPref", "Famiglia");
             Importo = 0;
             Data = DateTime.Today;
         }
